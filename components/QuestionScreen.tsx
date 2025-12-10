@@ -74,7 +74,7 @@ function GoodLuckNote() {
         <div className="absolute -bottom-2 left-7 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-white" />
         <div className="absolute -bottom-2.5 left-7 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-gray-100 -z-10" />
       </div>
-      <img src="/paw.jpg" alt="" className="ml-1 w-24 h-24 object-cover rounded-full border-4 border-white shadow-lg" />
+      <img src="/paw.jpg" alt="" className="ml-1 w-24 h-24 object-cover border-4 border-white shadow-lg" style={{ borderRadius: '50% 50% 0 0' }} />
     </div>
   )
 }
