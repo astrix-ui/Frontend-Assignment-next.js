@@ -144,6 +144,4 @@ quiz-app/
 
 This includes time for researching best practices for quiz UX patterns, testing different animation timings, and ensuring WCAG compliance.
 
-## License
 
-This project is provided as-is for educational and demonstration purposes.
