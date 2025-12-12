@@ -16,7 +16,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div 
+    <main 
       className="min-h-screen flex items-center justify-center p-8 transition-all duration-1000"
       style={{
         background: showGradient 
@@ -25,6 +25,6 @@ export default function Home() {
       }}
     >
       <QuizCard onComplete={() => setShowGradient(false)} />
-    </div>
+    </main>
   )
 }

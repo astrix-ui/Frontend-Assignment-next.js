@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { quizQuestions } from '../app/data/questions'
 import ProgressBar from './QuizProgress'
@@ -20,7 +20,7 @@ export default function QuizCard({ onComplete }: QuizCardProps = {}) {
   const selectedAnswer = answers[currentIndex]
   const isLastQuestion = currentIndex === quizQuestions.length - 1
 
-  const handleAnswerSelect = (answerIdx: number) => {
+  const handleAnswerSelect = useCallback((answerIdx: number) => {
     const updated = [...answers]
     updated[currentIndex] = answerIdx
     setAnswers(updated)
@@ -33,26 +33,26 @@ export default function QuizCard({ onComplete }: QuizCardProps = {}) {
         setCurrentIndex(currentIndex + 1)
       }
     }, 400)
-  }
+  }, [answers, currentIndex, isLastQuestion, onComplete])
 
-  const goToPrev = () => {
+  const goToPrev = useCallback(() => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1)
     }
-  }
+  }, [currentIndex])
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     if (currentIndex < quizQuestions.length - 1 && selectedAnswer !== null) {
       setCurrentIndex(currentIndex + 1)
     }
-  }
+  }, [currentIndex, selectedAnswer])
 
-  const restart = () => {
+  const restart = useCallback(() => {
     setCurrentIndex(0)
     setAnswers(Array(quizQuestions.length).fill(null))
     setFinished(false)
     window.dispatchEvent(new Event('quizRestart'))
-  }
+  }, [])
 
   const correctCount = answers.reduce<number>((count, ans, idx) => {
     if (ans === null) return count

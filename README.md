@@ -75,6 +75,7 @@ Typography system using Playfair Display for headings (serif, elegant) and Inter
 - **Progress tracking**: Visual progress bar shows completion status throughout the quiz
 - **Navigation controls**: Previous/next arrow buttons for manual navigation between answered questions
 - **Restart functionality**: "Start Again" button resets the entire quiz and restores the gradient background
+- **Performance optimized**: Memoized components and optimized re-renders for smooth user experience
 
 ### Design & UX
 - **Pixel-perfect implementation**: Layout, typography, spacing, and colors match the provided Figma design specifications
@@ -138,9 +139,9 @@ quiz-app/
 
 **Approximate time spent: 6–7 hours** spread over three days.
 
-- **Day 1 (2.5 hours)**: Initial setup, project structure planning, Tailwind configuration, and implementing the basic quiz layout and card design
+- **Day 1 (1 hour)**: Initial setup, project structure planning, Tailwind configuration, and implementing the basic quiz layout and card design
 - **Day 2 (2.5 hours)**: Wiring up the quiz logic (state management, navigation, scoring), implementing question transitions, and adding the progress bar
-- **Day 3 (1.5–2 hours)**: Final design polish (matching Figma pixel-perfect), adding animations, implementing accessibility features, and testing keyboard navigation
+- **Day 3 (1 hour)**: Final design polish (matching Figma pixel-perfect), adding animations, implementing accessibility features, and testing keyboard navigation
 
 This includes time for researching best practices for quiz UX patterns, testing different animation timings, and ensuring WCAG compliance.
 
